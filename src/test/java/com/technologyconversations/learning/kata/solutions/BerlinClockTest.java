@@ -3,9 +3,6 @@ package com.technologyconversations.learning.kata.solutions;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class BerlinClockTest {
 
     BerlinClock berlinClock = new BerlinClock();

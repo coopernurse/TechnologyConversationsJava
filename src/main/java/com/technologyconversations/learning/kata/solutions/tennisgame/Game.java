@@ -1,5 +1,19 @@
 package com.technologyconversations.learning.kata.solutions.tennisgame;
 
+// Implement a simple tennis game
+//
+// Scores from zero to three points are described as 
+// "love", "fifteen", "thirty", and "forty" respectively.
+//
+// If at least three points have been scored by each side and a player has one more point 
+// than his opponent, the score of the game is "advantage" for the player in the lead.
+//
+// If at least three points have been scored by each player, and the scores are equal, 
+// the score is "deuce".
+//
+// A game is won by the first player to have won at least four points in total and at least 
+// two points more than the opponent.
+//
 public class Game {
 
     private Player player1;
@@ -11,21 +25,11 @@ public class Game {
     }
 
     public String getScore() {
-        if (player1.getScore() >= 3 && player2.getScore() >= 3) {
-            if (Math.abs(player2.getScore() - player1.getScore()) >= 2) {
-                return getLeadPlayer().getName() + " won";
-            } else if (player1.getScore() == player2.getScore()) {
-                return "deuce";
-            } else {
-                return "advantage " + getLeadPlayer().getName();
-            }
-        } else {
-            return player1.getScoreDescription() + ", " + player2.getScoreDescription();
-        }
+        return "";
     }
 
     public Player getLeadPlayer() {
-        return (player1.getScore() > player2.getScore()) ? player1 : player2;
+        return player1;
     }
 
 }
